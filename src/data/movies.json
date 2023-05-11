@@ -1,29 +1,64 @@
 {
-    "movies":[
-        {
-            "id": 1,
-            "categoryId":1,
-            "movieName": "Matrix",
-            "movieDescription": "Matrix is a movie about the history of the universe. It was created in 1999 by the British mathematician J. R. R. Tolkien.",
-            "moviePoster": "https://www.themoviedb.org/t/p/w220_and_h330_face/aOIuZAjPaRIE6CMzbazvcHuHXDc.jpg"
-        }
-    ],
-    "categories":[
-        {
-            "categoryId":0,
-            "categoryName": "All Movies"
-        },
-        {
-            "categoryId":1,
-            "categoryName": "Action"
-        },
-        {
-            "categoryId":2,
-            "categoryName": "Adventure"
-        },
-        {
-            "categoryId":3,
-            "categoryName": "Romantic"
-        }
-    ]
+  "movies": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "movieName": "Matrix",
+      "movieDescription": "Matrix is a movie about the history of the universe. It was created in 1999 by the British mathematician J. R. R. Tolkien.",
+      "moviePoster": "https://www.themoviedb.org/t/p/w220_and_h330_face/aOIuZAjPaRIE6CMzbazvcHuHXDc.jpg"
+    },
+    {
+      "categoryId": "1",
+      "movieName": "Optio minus exercit",
+      "movieText": "Mollitia non volupta",
+      "movieImage": "Maxime voluptate cup",
+      "id": 2
+    },
+    {
+      "categoryId": "2",
+      "movieName": "Irure ut occaecat ne",
+      "movieText": "Natus harum minus et",
+      "movieImage": "Excepteur ipsum qui",
+      "id": 3
+    },
+    {
+      "categoryId": "3",
+      "movieName": "In id mollit harum a",
+      "movieText": "Ut eos qui porro ut",
+      "movieImage": "Assumenda amet non ",
+      "id": 4
+    },
+    {
+      "categoryId": "1",
+      "movieName": "Sint magnam nisi ali",
+      "movieText": "Qui error explicabo",
+      "movieImage": "Natus Nam impedit n",
+      "id": 5
+    },
+    {
+      "categoryId": "3",
+      "movieName": "Nam ipsa vitae duci",
+      "movieText": "Officia eos nostrum ",
+      "movieImage": "Cum exercitationem v",
+      "id": 6
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": 0,
+      "categoryName": "All Movies"
+    },
+    {
+      "categoryId": 1,
+      "categoryName": "Action"
+    },
+    {
+      "categoryId": 2,
+      "categoryName": "Adventure"
+    },
+    {
+      "categoryId": 3,
+      "categoryName": "Romantic"
+    }
+  ]
 }
