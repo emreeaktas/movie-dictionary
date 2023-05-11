@@ -1,0 +1,47 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //diğer kartlar geldiğinde yan yana ve düzgün biçimde yerleşsin diye
+    .card{
+        margin: 15px;
+        width: 450px;
+        height: 300px;
+        border-radius: 25px;
+        color: wheat;
+        display: flex;
+        background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0, 255, 255, 0.6));
+        transition: .5s;
+        &:hover{
+            box-shadow: 5px 5px 15px wheat;
+            transform: scale(1.05);
+        }
+    }
+    .img{
+        width: 200px;
+        height: 300px;
+        border-radius: 25px 0 0 25px;
+        object-fit: cover;
+    }
+    .card-body{
+        margin-left: 15px;
+        position: relative;
+    }
+    button{
+        position: absolute;
+        width: 25px;
+        height: 300px;
+        border-radius: 25px 0 0 25px;
+        cursor: pointer;
+        opacity: 0;
+        transition: .6s;
+        border: none;
+        font-size: 30px;
+        &:hover{
+            width: 200px;
+            opacity: 0.4;
+            background-color: darkred;
+            color: wheat;
+        }
+    }
+}

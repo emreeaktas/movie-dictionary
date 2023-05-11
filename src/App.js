@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./scss/app.scss";
+import Form from "./components/Form";
+import Card from "./components/Card";
+import Nav from "./components/Nav";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function App() {
+  const [categories, setCategories] = useState([]);
+  const [movies, setMovies] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(0);
+  const getCategories = async () => {
+    const response = await axios(" http://localhost:3100/categories");
+    setCategories(response.data);
+    console.log(response);
+  };
+  useEffect(() => {
+    getCategories();
+    getMovies();
+    console.log(selectedCategory);
+  }, [selectedCategory]);
+
+  const getMovies = async () => {
+    let url = "http://localhost:3100/movies";
+    if (selectedCategory !== 0) {
+      url += "?categoryId=" + selectedCategory;
+    }
+    const response = await axios(url);
+    setMovies(response.data);
+  };
+  const newMovie = (movie) => {
+    const response = axios.post(`http://localhost:3100/movies`, movie);
+    console.log(response);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav categories={categories} setSelectedCategory={setSelectedCategory} />
+      <Form newMovie={newMovie} />
+      <Card movies={movies} />
+    </>
   );
 }
 

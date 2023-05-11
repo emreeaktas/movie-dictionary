@@ -1,0 +1,29 @@
+{
+    "movies":[
+        {
+            "id": 1,
+            "categoryId":1,
+            "movieName": "Matrix",
+            "movieDescription": "Matrix is a movie about the history of the universe. It was created in 1999 by the British mathematician J. R. R. Tolkien.",
+            "moviePoster": "https://www.themoviedb.org/t/p/w220_and_h330_face/aOIuZAjPaRIE6CMzbazvcHuHXDc.jpg"
+        }
+    ],
+    "categories":[
+        {
+            "categoryId":0,
+            "categoryName": "All Movies"
+        },
+        {
+            "categoryId":1,
+            "categoryName": "Action"
+        },
+        {
+            "categoryId":2,
+            "categoryName": "Adventure"
+        },
+        {
+            "categoryId":3,
+            "categoryName": "Romantic"
+        }
+    ]
+}
